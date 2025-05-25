@@ -4,6 +4,51 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "ChatGPT To F8",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f8" },
+                                "to": [{ "shell_command": "open -a ChatGPT" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "mpv To F7",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f7" },
+                                "to": [{ "shell_command": "open -a mpv" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Finder To F6",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f6" },
+                                "to": [{ "shell_command": "open -a Finder" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Raycast to F2",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f2" },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Bind application key to act as 🌐 key on external KBs only",
                         "manipulators": [
                             {
@@ -21,6 +66,52 @@
                     }
                 ]
             },
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f1" },
+                    "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                },
+                {
+                    "from": { "key_code": "f2" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "f4" },
+                    "to": [{ "consumer_key_code": "dictation" }]
+                },
+                {
+                    "from": { "key_code": "f5" },
+                    "to": [{ "apple_vendor_keyboard_key_code": "spotlight" }]
+                },
+                {
+                    "from": { "key_code": "f6" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "f7" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "f8" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "f9" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "f10" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "f11" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "f12" },
+                    "to": [{ "apple_vendor_keyboard_key_code": "dashboard" }]
+                }
+            ],
             "name": "Default profile",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
