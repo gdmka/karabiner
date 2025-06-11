@@ -14,11 +14,11 @@
                         ]
                     },
                     {
-                        "description": "ChatGPT To F8",
+                        "description": "Jan To F8",
                         "manipulators": [
                             {
                                 "from": { "key_code": "f8" },
-                                "to": [{ "shell_command": "open -a ChatGPT" }],
+                                "to": [{ "shell_command": "open -a Jan" }],
                                 "type": "basic"
                             }
                         ]
