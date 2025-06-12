@@ -4,6 +4,52 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "F10 to Help Search",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f10" },
+                                "to": [
+                                    {
+                                        "key_code": "slash",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Spotlight bidirectonal shortcut",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": ["option"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "lazy": true
+                                    },
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "key_code": "left_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "iTerm2 To F9",
                         "manipulators": [
                             {
@@ -44,7 +90,7 @@
                         ]
                     },
                     {
-                        "description": "F5 to Control Center",
+                        "description": "Control Center to F5",
                         "manipulators": [
                             {
                                 "from": { "key_code": "f5" },
@@ -91,7 +137,7 @@
                 },
                 {
                     "from": { "key_code": "f5" },
-                    "to": [{ "apple_vendor_keyboard_key_code": "launchpad" }]
+                    "to": [{ "key_code": "vk_none" }]
                 },
                 {
                     "from": { "key_code": "f6" },
