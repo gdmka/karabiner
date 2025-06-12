@@ -14,11 +14,11 @@
                         ]
                     },
                     {
-                        "description": "Jan To F8",
+                        "description": "LMStudio To F8",
                         "manipulators": [
                             {
                                 "from": { "key_code": "f8" },
-                                "to": [{ "shell_command": "open -a Jan" }],
+                                "to": [{ "shell_command": "open -a 'LM Studio'" }],
                                 "type": "basic"
                             }
                         ]
@@ -44,14 +44,14 @@
                         ]
                     },
                     {
-                        "description": "Raycast to F2",
+                        "description": "F5 to Control Center",
                         "manipulators": [
                             {
-                                "from": { "key_code": "f2" },
+                                "from": { "key_code": "f5" },
                                 "to": [
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"]
+                                        "key_code": "n",
+                                        "modifiers": ["left_command", "left_option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -83,7 +83,7 @@
                 },
                 {
                     "from": { "key_code": "f2" },
-                    "to": [{ "key_code": "vk_none" }]
+                    "to": [{ "apple_vendor_keyboard_key_code": "spotlight" }]
                 },
                 {
                     "from": { "key_code": "f4" },
@@ -91,7 +91,7 @@
                 },
                 {
                     "from": { "key_code": "f5" },
-                    "to": [{ "apple_vendor_keyboard_key_code": "spotlight" }]
+                    "to": [{ "apple_vendor_keyboard_key_code": "launchpad" }]
                 },
                 {
                     "from": { "key_code": "f6" },
