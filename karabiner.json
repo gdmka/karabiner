@@ -19,37 +19,6 @@
                         ]
                     },
                     {
-                        "description": "Spotlight bidirectonal shortcut",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": ["option"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_command",
-                                        "lazy": true
-                                    },
-                                    {
-                                        "key_code": "spacebar",
-                                        "modifiers": ["left_command"]
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "left_command",
-                                        "lazy": true
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "iTerm2 To F9",
                         "manipulators": [
                             {
@@ -70,11 +39,11 @@
                         ]
                     },
                     {
-                        "description": "mpv To F7",
+                        "description": "Jan To F7",
                         "manipulators": [
                             {
                                 "from": { "key_code": "f7" },
-                                "to": [{ "shell_command": "open -a mpv" }],
+                                "to": [{ "shell_command": "open -a Jan" }],
                                 "type": "basic"
                             }
                         ]
