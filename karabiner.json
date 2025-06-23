@@ -4,6 +4,61 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "F1 to Control + Space",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f1" },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "F2 to Raycast",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f2" },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "F4 to Dictation Shortcut (Ctrl+Opt+D)",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f4" },
+                                "to": [
+                                    {
+                                        "key_code": "d",
+                                        "modifiers": ["left_control", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Space Control To F11",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f11" },
+                                "to": [{ "shell_command": "/usr/local/bin/flashspace open-space-control" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "F10 to Help Search",
                         "manipulators": [
                             {
@@ -91,6 +146,54 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f1" },
+                            "to": [{ "key_code": "vk_none" }]
+                        },
+                        {
+                            "from": { "key_code": "f2" },
+                            "to": [{ "apple_vendor_keyboard_key_code": "spotlight" }]
+                        },
+                        {
+                            "from": { "key_code": "f3" },
+                            "to": [{ "apple_vendor_keyboard_key_code": "mission_control" }]
+                        },
+                        {
+                            "from": { "key_code": "f4" },
+                            "to": [{ "consumer_key_code": "dictation" }]
+                        }
+                    ],
+                    "identifiers": { "is_keyboard": true }
+                },
+                {
+                    "fn_function_keys": [
+                        {
+                            "from": { "key_code": "f1" },
+                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        },
+                        {
+                            "from": { "key_code": "f2" },
+                            "to": [{ "apple_vendor_keyboard_key_code": "spotlight" }]
+                        },
+                        {
+                            "from": { "key_code": "f3" },
+                            "to": [{ "apple_vendor_keyboard_key_code": "mission_control" }]
+                        },
+                        {
+                            "from": { "key_code": "f4" },
+                            "to": [{ "consumer_key_code": "dictation" }]
+                        }
+                    ],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 34304,
+                        "vendor_id": 1452
+                    }
+                }
+            ],
             "fn_function_keys": [
                 {
                     "from": { "key_code": "f1" },
