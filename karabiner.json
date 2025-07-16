@@ -4,6 +4,21 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "F12 to Option + Spacebar",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f12" },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "F1 to Control + Space",
                         "manipulators": [
                             {
@@ -34,14 +49,14 @@
                         ]
                     },
                     {
-                        "description": "F4 to Dictation Shortcut (Ctrl+Opt+D)",
+                        "description": "F4 → Option + Shift + K",
                         "manipulators": [
                             {
                                 "from": { "key_code": "f4" },
                                 "to": [
                                     {
-                                        "key_code": "d",
-                                        "modifiers": ["left_control", "left_option"]
+                                        "key_code": "k",
+                                        "modifiers": ["left_option", "left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -205,7 +220,7 @@
                 },
                 {
                     "from": { "key_code": "f4" },
-                    "to": [{ "consumer_key_code": "dictation" }]
+                    "to": [{ "key_code": "vk_none" }]
                 },
                 {
                     "from": { "key_code": "f5" },
