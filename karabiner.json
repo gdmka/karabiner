@@ -4,10 +4,25 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "F12 to Option + Spacebar",
+                        "description": "F12 → Ctrl + Q",
                         "manipulators": [
                             {
                                 "from": { "key_code": "f12" },
+                                "to": [
+                                    {
+                                        "key_code": "q",
+                                        "modifiers": ["left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "F4 to Option + Spacebar",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f4" },
                                 "to": [
                                     {
                                         "key_code": "spacebar",
@@ -49,10 +64,10 @@
                         ]
                     },
                     {
-                        "description": "F4 → Option + Shift + K",
+                        "description": "F3 → Option + Shift + K",
                         "manipulators": [
                             {
-                                "from": { "key_code": "f4" },
+                                "from": { "key_code": "f3" },
                                 "to": [
                                     {
                                         "key_code": "k",
@@ -252,7 +267,7 @@
                 },
                 {
                     "from": { "key_code": "f12" },
-                    "to": [{ "apple_vendor_keyboard_key_code": "dashboard" }]
+                    "to": [{ "key_code": "vk_none" }]
                 }
             ],
             "name": "Default profile",
