@@ -1,21 +1,51 @@
 {
+    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Backslash tap → Shift + Command + J, hold → Backslash (Homerow)",
+                        "description": "Backslash tap → Shift + Command + J, hold → Tab, double-tap → Tab (Homerow)",
                         "manipulators": [
                             {
-                                "from": { "key_code": "backslash" },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 200 },
-                                "to": [
+                                "from": { "key_code": "tab" },
+                                "parameters": {
+                                    "basic.to_if_alone_timeout_milliseconds": 100,
+                                    "basic.to_if_held_down_threshold_milliseconds": 100
+                                },
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "tab_pressed_once",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "set_variable": {
+                                            "name": "tab_pressed_once",
+                                            "value": 1
+                                        }
+                                    },
                                     {
                                         "key_code": "j",
                                         "modifiers": ["left_command", "left_shift"]
                                     }
                                 ],
-                                "to_if_held_down": [{ "key_code": "backslash" }],
+                                "to_if_held_down": [{ "key_code": "tab" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "tab_pressed_once",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "tab" },
+                                "to": [{ "key_code": "tab" }],
                                 "type": "basic"
                             }
                         ]
