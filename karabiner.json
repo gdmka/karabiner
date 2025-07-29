@@ -4,6 +4,40 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Backslash tap → Shift + Command + J, hold → Backslash (Homerow)",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "backslash" },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 200 },
+                                "to": [
+                                    {
+                                        "key_code": "j",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "backslash" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Caps Lock tap → Shift + Command + Space, hold → Caps Lock (Homerow)",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "caps_lock" },
+                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 200 },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_command", "left_shift"]
+                                    }
+                                ],
+                                "to_if_held_down": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "F12 → Ctrl + Q",
                         "manipulators": [
                             {
